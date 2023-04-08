@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Say Hyundai</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="main">
+  <div class="main-wrapper">
+
+    <h1 class="title">Hyundai Voice Recognition</h1>
+    <span class="subtitle">Please say Hyundai with Korean Accent</span>
+
+    <div class="container">
+      <div id="record-icon" class="circle-icon">
+        <div class="inner-circle">
+          <img id="js-start" class="inner-icon" src="./images/mic.png" alt="">
+          <img id="js-stop" class="inner-icon" style="display: none;" src="./images/stop.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <span class='js-info'>Please Click Record Button</span>
+
+    <div class="status">
+      <span>This text will be replaced by JS</span>
+    </div>
+
+    <div class="google-translate">
+      <span>Need Assistance?</span>
+      <a href="https://translate.google.com/?sl=en&tl=ko&text=hyundai&op=translate" target="_blank">
+        <button class="link-button">
+          <img src="./images/google.png" class="g-image" alt="">
+          Try Listen in Google Translate
+        </button>
+      </a>
+    </div>
+
+    <div class="compat-button">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition#browser_compatibility"
+        target="_blank">
+        <button class="link-button">
+          Check Browser Compatibility Here
+        </button>
+      </a>
+    </div>
+
+    <audio id="audioo" controls></audio>
+  </div>
+
+  <script src="ui.js"></script>
+  <script src="google-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Say Hyundai</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/aromanize@0.1.5/aromanize.min.js"></script>
+</head>
+
+<body>
+  <h3>Compatibility Info</h3>
+  <ul class='js-compat'></ul>
+  <p>Say <strong class='js-word-to-say'></strong> after START button is pressed</p>
+  <div class='js-services services'>
+    <label for="speech-services">Speech Services</label>
+  </div>
+  <div class='align-center'>
+    <button class='js-start'>START</button>
+    <button class='js-stop'>STOP</button>
+    <span class='js-recording recording-circle'></span>
+  </div>
+  <h3>Phrases: </h3>
+  <p class='js-phrases'></p>
+  <h3>Info:</h3>
+  <span class='js-info'></span>
+  <div style="display: flex; gap: 1rem; align-items: center;">
+    <h3>Total Acc:</h3>
+    <span class="js-acc">0%</span>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

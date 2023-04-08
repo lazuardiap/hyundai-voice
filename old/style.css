@@ -1,0 +1,231 @@
+body {
+  background-color: #2f2f2f;
+  color: #fff;
+}
+
+
+.services {
+  margin-bottom: .6rem;
+}
+
+.recording-circle {
+  background-color: grey;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin-right: 0.25em;
+  display: inline-block;
+}
+
+.recording-circle.start {
+  background-color: red;
+  animation: ease pulse 2s infinite;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: #f06c6c;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+/* NEW STYLED FILE */
+
+html {
+  height:100vh;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.main {
+  background-color: rgb(228, 239, 254);
+  color: #2f2f2f;
+  height: 100%;
+  display: grid;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.main-wrapper {
+  display: grid;
+  justify-items: center;
+}
+
+.circle-icon {
+  height: 156px;
+  width: 156px;
+  background-color: rgb(10, 48, 107, 50%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.container {
+  position: relative;
+}
+
+.inner-circle {
+  height: 128px;
+  width: 128px;
+  background-color: #0A306B;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.request-loader {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  background: rgb(10, 48, 107, 50%);
+  box-shadow: 0 0 20px 0 #0A306B
+}
+
+.request-loader::after {
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: 0;
+  bottom: 0;
+  content: '';
+  height: 100%;
+  width: 100%;
+  border: 8px solid #0A306B;
+  border-radius: 100%;
+  animation-name: ripple;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(.65,0,.34,1);
+  z-index: -1;
+}
+
+.request-loader::before {
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: 0;
+  bottom: 0;
+  content: '';
+  height: 100%;
+  width: 100%;
+  border: 8px solid rgba(0,0,0,0.2);
+  border-radius: 100%;
+  animation-name: ripple;
+  animation-duration: 3s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(.65,0,.34,1);
+  z-index: -1;
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale3d(0.75,0.75,1);
+  }
+  
+  to {
+    opacity: 0;
+    transform: scale3d(1.5,1.5,1);
+  }
+}
+
+.inner-icon {
+  height: 40%;
+}
+
+.js-info {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.correct {
+  padding: 12px 16px;  
+  font-weight: 600;
+  background-color: #377421;
+  color: #fff;
+  border-radius: 8%;
+  display: none;
+}
+
+.wrong {
+  padding: 12px 16px;  
+  font-weight: 600;
+  background-color: #AD3126;
+  color: #fff;
+  border-radius: 8%;
+  display: none;
+}
+
+.google-translate {
+  justify-items: center;
+  gap: 0.5rem;
+  display: none;
+}
+
+.compat-button {
+  display: none;
+}
+
+.link-button {
+  padding: 12px 16px;
+  background-color: rgb(228, 239, 254);
+  border-radius: 12px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  justify-content: center;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.g-image {
+  width: 8%;
+}
